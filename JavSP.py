@@ -446,14 +446,14 @@ def crop_poster_wrapper(fanart_file, poster_file, method='normal', hard_sub=Fals
             logger.debug('人脸识别失败，回退到常规裁剪方法')
             logger.debug(e, exc_info=True)
             crop_poster(fanart_file, poster_file)
-    # elif method == 'retina':
-    #     from core.ai_crop.retina import ai_crop_poster
-    #     try:
-    #         ai_crop_poster(fanart_file, poster_file)
-    #     except Exception as e:
-    #         logger.debug('人脸识别失败，回退到常规裁剪方法')
-    #         logger.debug(e, exc_info=True)
-    #         crop_poster(fanart_file, poster_file)
+    elif method == 'yunet':
+        from core.ai_crop.yunet import ai_crop_poster
+        try:
+            ai_crop_poster(fanart_file, poster_file)
+        except Exception as e:
+            logger.debug('人脸识别失败，回退到常规裁剪方法')
+            logger.debug(e, exc_info=True)
+            crop_poster(fanart_file, poster_file)
     else:
         crop_poster(fanart_file, poster_file)
     if cfg.Picture.add_label_to_cover:

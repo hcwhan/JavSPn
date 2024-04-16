@@ -85,7 +85,7 @@ No need to buy me any coffee LoL. If you like to help, please help me through th
 
 ## License
 
-This project is under the restriction of both the GPL-3.0 License and the [Anti 996 License](https://github.com/996icu/996.ICU/blob/master/LICENSE_CN). On top of that, using this software implies that you accept the following terms: 
+This project is under the restriction of both the GPL-3.0 License and the [Anti 996 License](https://github.com/996icu/996.ICU/blob/master/LICENSE). On top of that, using this software implies that you accept the following terms: 
 - I will only use this software for academic purpose
 
 - I won't advertize this project on any Chinese social media like weibo or wechat.

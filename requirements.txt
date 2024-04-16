@@ -17,5 +17,5 @@ requests==2.31.0
 tqdm==4.59.0
 urllib3==1.25.11
 cryptography==42.0.4
-numpy==1.26.4
-opencv-python==4.9.0.80
+numpy
+opencv-python

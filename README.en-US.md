@@ -4,7 +4,7 @@
 
 **A Jav(Japanese Adult Video) Scraper that summarizes from multiple websites**
 
-By grabbing the	bangou in the file name, JavSP can pull data from multiple website and summarize them, classify them according to a predefined rule and create meta for softwares like Emby, Jellyfin and Kodi.
+By grabbing the	bangou in the file name, JavSP can pull data from multiple websites and summarize them, classify them according to a predefined rule and create meta for softwares like Emby, Jellyfin and Kodi.
 
 **Docker & WebUI**: Due to limited time and energy, there's no Docker support yet. On top of that, User Interface is not one of the primary goal for this [project](https://github.com/Yuukiy/JavSP/issues/148). If you need Docker support, maybe you can give [JavSP-Docker](https://github.com/tetato/JavSP-Docker) a try.
 

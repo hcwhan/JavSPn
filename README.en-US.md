@@ -57,7 +57,7 @@ This is a non-exhaustive list of implemented and unimplemented features being re
 
 With a portable version, the executable `JavSP` will generate a ```config.ini``` during first invocation. You can modify the configuration file to instruct how `JavSP` should work for you.
 
-JavSP also accepts CLI args and prioritize them over `config.ini`, you can run `JavSP -h` to see a list of supportted arguments. 
+JavSP also accepts CLI flags and prioritize them over `config.ini`, you can run `JavSP -h` to see a list of supportted flags. 
 
 For more detailed instructions please visit [JavSP Wiki](https://github.com/Yuukiy/JavSP/wiki)
 

@@ -519,7 +519,7 @@ def RunNormalMode(all_movies):
                     movie.info.uncensored or
                     movie.data_src == 'fc2' or
                     movie.info.label.upper() in cfg.Picture.use_ai_crop_labels or
-                    (R'\d' in cfg.Picture.use_ai_crop_labels and re.match(r'(\d{6}[-_]\d{3})', movie.info.dvdid))):
+                    (R'\D' in cfg.Picture.use_ai_crop_labels and re.match(r'(\d{6}[-_]\d{3})', movie.info.dvdid))):
                 method = cfg.Picture.ai_engine
                 inner_bar.set_description('使用AI裁剪海报封面')
             else:

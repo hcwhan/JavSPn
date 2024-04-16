@@ -43,7 +43,7 @@ This is a non-exhaustive list of implemented and unimplemented features being re
 	Visit [Github Release Page](https://github.com/Yuukiy/JavSP/releases/latest) and download the latest portable version of JavSP (Windows Only).
 
 - Buliding from source
-  - Ensure you have at least Python 3.8
+  - Ensure you have Python >= 3.8
   - Run the following
 
 	```

@@ -102,6 +102,5 @@ def ai_crop_poster(fanart, poster='', hw_ratio=1.42):
     poster_left = max(center_x - poster_w / 2, 0)
     poster_left = min(poster_left, fanart_w - poster_w)
     poster_left = int(poster_left)
-    cropped = image[0:poster_h, poster_left:poster_left+poster_w]
-
+    cropped = image[0:poster_h, poster_left:int(poster_left+poster_w)]
     cv.imwrite(poster, cropped) 

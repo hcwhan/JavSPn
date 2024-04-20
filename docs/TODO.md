@@ -2,3 +2,4 @@
 - [ ] Type annotations
 - [ ] TUI
 - [ ] More modes: Patch modes?
+- [ ] Generate version from tag

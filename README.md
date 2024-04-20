@@ -103,7 +103,3 @@ English version [here](./README.en-US.md).
 
 - 禁止将本软件用于商业用途
 
-
----
-
-![Star History Chart](https://api.star-history.com/svg?repos=Yuukiy/JavSP&type=Date)

@@ -99,6 +99,3 @@ This project is under the restriction of both the GPL-3.0 License and the [Anti 
 
 - I will not monetrize this software and make profit out of it.
 
----
-
-![Star History Chart](https://api.star-history.com/svg?repos=Yuukiy/JavSP&type=Date)

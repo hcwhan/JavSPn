@@ -1,4 +1,4 @@
-![JavSP](https://github.com/Yuukiy/JavSP/blob/master/image/javsp_logo.png?raw=true)
+![JavSP](https://github.com/glyh/JavSPn/blob/master/image/javsp_logo.png?raw=true)
 
 English version [here](./README.en-US.md).
 
@@ -15,7 +15,7 @@ English version [here](./README.en-US.md).
 ![License](https://img.shields.io/github/license/Yuukiy/JavSP)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 ![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)
-[![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
+[![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/glyh/JavSPn/actions/workflows/test-web-funcs.yml)
 [![Latest release](https://img.shields.io/github/v/release/glyh/JavSPn)](https://github.com/glyh/JavSPn/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
@@ -47,7 +47,7 @@ English version [here](./README.en-US.md).
 
 - 快速上手
 
-	前往[软件发布页](https://github.com/Yuukiy/JavSP/releases/latest)下载最新版本的软件，无需安装额外工具，开箱即用
+	前往[软件发布页](https://github.com/glyh/JavSPn/releases/latest)下载最新版本的软件，无需安装额外工具，开箱即用
 
 - 通过源代码构建
 
@@ -71,7 +71,7 @@ English version [here](./README.en-US.md).
 
 ## 问题反馈
 
-如果使用中遇到了 Bug，请[前往 Issue 区反馈](https://github.com/Yuukiy/JavSP/issues)（提问前请先搜索是否已有类似问题）
+如果使用中遇到了 Bug，请[前往 Issue 区反馈](https://github.com/glyh/JavSPn/issues)（提问前请先搜索是否已有类似问题）
 
 
 ## 参与贡献

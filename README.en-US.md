@@ -1,4 +1,4 @@
-![JavSP](https://github.com/Yuukiy/JavSP/blob/master/image/javsp_logo.png?raw=true)
+![JavSP](https://github.com/glyh/JavSPn/blob/master/image/javsp_logo.png?raw=true)
 
 # Jav Scraper Package
 
@@ -13,7 +13,7 @@ By grabbing the	bangou in the file name, JavSP can pull data from multiple websi
 ![License](https://img.shields.io/github/license/Yuukiy/JavSP)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 ![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)
-[![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
+[![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/glyh/JavSPn/actions/workflows/test-web-funcs.yml)
 [![Latest release](https://img.shields.io/github/v/release/glyh/JavSPn)](https://github.com/glyh/JavSPn/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
@@ -45,7 +45,7 @@ This is a non-exhaustive list of implemented and unimplemented features being re
 
 - For the impatient
 
-	Visit [Github Release Page](https://github.com/Yuukiy/JavSP/releases/latest) and download the latest portable version of JavSP (Windows Only).
+	Visit [Github Release Page](https://github.com/glyh/JavSPn/releases/latest) and download the latest portable version of JavSP (Windows Only).
 
 - Buliding from source
   - Ensure you have Python >= 3.9
@@ -70,7 +70,7 @@ Please file an issue if you find any problem using this software.😊
 
 ## Bug report
 
-If you encounter any bug that is not already encountered by other users(you can check this by searching through the issue page), don't hesitate to go and [file an isssue](https://github.com/Yuukiy/JavSP/issues).
+If you encounter any bug that is not already encountered by other users(you can check this by searching through the issue page), don't hesitate to go and [file an isssue](https://github.com/glyh/JavSPn/issues).
 
 
 ## Contribution

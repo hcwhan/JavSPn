@@ -1,0 +1,4 @@
+- [ ] Sanitize Log generation
+- [ ] Type annotations
+- [ ] TUI
+- [ ] More modes: Patch modes?

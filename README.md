@@ -10,12 +10,12 @@ English version [here](./README.en-US.md).
 
 **Docker & WebUI**: 由于精力所限，目前还没有做Docker的支持。此外，UI界面也不是[此项目的目标](https://github.com/Yuukiy/JavSP/issues/148)。如果你需要这两个功能，可以试试[@tetato/JavSP-Docker](https://github.com/tetato/JavSP-Docker)
 
-**i18n**: This project currently supports only Chinese. However, if you're willing, you can [vote here](https://github.com/Yuukiy/JavSP/discussions/157) for the language you'd like to see added
+**i18n**: This is a work in progress, we currently only have a English README available.
 
 ![License](https://img.shields.io/github/license/Yuukiy/JavSP)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
-[![Crawlers test](https://img.shields.io/github/actions/workflow/status/Yuukiy/JavSP/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
+[![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
 [![Latest release](https://img.shields.io/github/v/release/Yuukiy/JavSP)](https://github.com/Yuukiy/JavSP/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 

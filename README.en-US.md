@@ -14,7 +14,7 @@ By grabbing the	bangou in the file name, JavSP can pull data from multiple websi
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 ![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)
 [![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
-[![Latest release](https://img.shields.io/github/v/release/Yuukiy/JavSP)](https://github.com/glyh/JavSPn/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/glyh/JavSPn)](https://github.com/glyh/JavSPn/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ## Features compared to [upstream](https://github.com/Yuukiy/JavSP)
@@ -52,7 +52,7 @@ This is a non-exhaustive list of implemented and unimplemented features being re
   - Run the following
 
 	```
-	git clone https://github.com/Yuukiy/JavSP.git
+	git clone --recurse-submodules https://github.com/glyh/JavSPn.git
 	cd JavSP
 	poetry install
 	poetry run javspn

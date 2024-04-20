@@ -18,9 +18,10 @@ By grabbing the	bangou in the file name, JavSP can pull data from multiple websi
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ## Features compared to [upstream](https://github.com/Yuukiy/JavSP)
-- [ ] Crawls stage photos(optional).
-- [ ] Support cropping cover with either: 1. face detection with yunet; 2. body segmentation with pphumanseg.
-- [ ] Use `cx_Freeze` to package, which is smaller in size.
+- [x] Crawls stage photos(optional).
+- [x] Support cropping cover with either: 1. face detection with yunet; 2. body segmentation with pphumanseg.
+- [x] Use `cx_Freeze` to package, which is smaller in size.
+- [x] Adheres to pip packaging standards, and thus can be used as a library.
 
 ## Features
 

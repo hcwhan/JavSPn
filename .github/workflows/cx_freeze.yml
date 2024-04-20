@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: PyInstaller
+name: Cx_Freeze
 
 # Controls when the workflow will run
 on:
@@ -52,7 +52,7 @@ jobs:
           poetry install
 
       - name: Build with PyInstaller for windows
-        run: poetry run python make/make.py
+        run: poetry run python setup.py build_exe -b dist
 
       - name: Switch code page
         run: |
@@ -65,8 +65,12 @@ jobs:
         run: |
           echo "VERSION=$(poetry run python make/make.py version)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
+      - name: Compress archieve
+        run: |
+          Compress-Archive -Path $pwd\dist -DestinationPath dist_archieved.zip
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v1
         with:
           name: JavSP-${{ env.VERSION }}-Windows-amd64
-          path: dist/JavSP.exe
+          path: dist_archieved.zip

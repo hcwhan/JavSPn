@@ -51,7 +51,7 @@ jobs:
         run: |
           poetry install
 
-      - name: Build with PyInstaller for windows
+      - name: Build with Cx_Freeze for windows
         run: poetry run python setup.py build_exe -b dist
 
       - name: Switch code page

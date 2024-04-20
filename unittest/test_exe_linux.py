@@ -26,7 +26,7 @@ def test_javsp_exe():
     try:
         os.system(f"dd if=/dev/zero of={FILE} bs=1MiB count={size_MiB}")
 
-        exit_code = os.system(f"./JavSP --no-update --auto-exit --input . --output {tmp_dir}")
+        exit_code = os.system(f"./JavSPn --no-update --auto-exit --input . --output {tmp_dir}")
         assert exit_code == 0, f"Non-zero exit code: {exit_code}"
         # Check generated files
         files = glob(tmp_dir + '/**/*.*', recursive=True)

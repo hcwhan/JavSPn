@@ -176,8 +176,8 @@ def check_update(allow_check=True, auto_update=True):
         return
     # 检查更新
     if allow_check:
-        api_url = 'https://api.github.com/repos/Yuukiy/JavSP/releases/latest'
-        release_url = 'https://github.com/Yuukiy/JavSP/releases/latest'
+        api_url = 'https://api.github.com/repos/glyh/JavSPn/releases/latest'
+        release_url = 'https://github.com/glyh/JavSPn/releases/latest'
         print('正在检查更新...', end='')
         try:
             data = request_get(api_url, timeout=3).json()
@@ -202,7 +202,7 @@ def check_update(allow_check=True, auto_update=True):
         title = f'Jav Scraper Package: {local_version} (已是最新版)'
         print_header([title])
     elif update_status == 'fail_to_check':
-        release_url_mirror = 'https://hub.fastgit.xyz/Yuukiy/JavSP/releases/latest'
+        release_url_mirror = 'https://hub.fastgit.xyz/glyh/JavSPn/releases/latest'
         titles = [f'Jav Scraper Package: {local_version}']
         info = ['检查更新失败，请前往以下地址查看最新版本:', '  '+release_url,
                 '如果你打不开上面的地址，也可以尝试访问镜像站点:', '  '+release_url_mirror]

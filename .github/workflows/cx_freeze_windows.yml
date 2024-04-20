@@ -65,5 +65,5 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v1
         with:
-          name: JavSPn-${{ env.VERSION }}-Windows-amd64.zip
+          name: JavSPn-${{ env.VERSION }}-Windows-amd64
           path: dist

@@ -52,7 +52,7 @@ jobs:
           poetry install
 
       - name: Build with PyInstaller for windows
-        run: poetry run make/make.py
+        run: poetry run python make/make.py
 
       - name: Switch code page
         run: |
@@ -63,7 +63,7 @@ jobs:
 
       - name: Set VERSION variable for windows
         run: |
-          echo "VERSION=$(poetry run make\make.py version)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          echo "VERSION=$(poetry run python make/make.py version)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v1

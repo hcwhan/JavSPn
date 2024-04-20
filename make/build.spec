@@ -33,7 +33,7 @@ for glob_pattern in globs:
         dir_path = os.path.dirname(file)
         datas.append((file, os.path.relpath(dir_path, '..')))
 
-a = Analysis(['../javspn/JavSP.py'],
+a = Analysis(['../javspn/__main__.py'],
              pathex=['build'],
              binaries=[],
              datas = datas,

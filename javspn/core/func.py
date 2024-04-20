@@ -12,6 +12,7 @@ import subprocess
 import platform
 from datetime import datetime
 import importlib.metadata as meta
+from distutils.version import LooseVersion
 from colorama import Style
 
 # 判断系统是否可以使用tk
@@ -184,7 +185,7 @@ def check_update(allow_check=True, auto_update=True):
             latest_version = data['tag_name']
             release_time = utc2local(data['published_at'])
             release_date = release_time.isoformat().split('T')[0]
-            if version.parse(local_version) < version.parse(latest_version):
+            if LooseVersion(local_version) < LooseVersion(latest_version):
                 update_status = 'new_version'
             else:
                 update_status = 'already_latest'

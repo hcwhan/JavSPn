@@ -22,8 +22,8 @@ except ImportError:
     USE_GUI = False
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from ..web.base import *
-from .lib import mei_path, re_escape
+from javspn.web.base import *
+from javspn.core.lib import mei_path, re_escape
 
 
 __all__ = ['select_folder', 'get_scan_dir', 'remove_trail_actor_in_title',

@@ -6,8 +6,8 @@ from lxml.builder import E
 
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from .datatype import MovieInfo
-from .config import cfg
+from javspn.core.datatype import MovieInfo
+from javspn.core.config import cfg
 
 
 def write_nfo(info: MovieInfo, nfo_file):

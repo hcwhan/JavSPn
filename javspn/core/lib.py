@@ -16,10 +16,7 @@ def re_escape(s: str) -> str:
 
 def mei_path(path):
     """获取一个随代码打包的文件在解压后的路径"""
-    if getattr(sys, 'frozen', False):
-        return os.path.join(sys._MEIPASS, path)
-    else:
-        return path
+    return path
 
 
 def strftime_to_minutes(s: str) -> int:

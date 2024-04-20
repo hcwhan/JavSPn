@@ -40,9 +40,9 @@ priority = "primary"
 
 
 [tool.poetry.group.dev.dependencies]
-pyinstaller = "^6.6.0"
 pytest = "^8.1.1"
 flake8 = "^7.0.0"
+cx-freeze = "^6.15.16"
 
 [build-system]
 requires = ["poetry-core"]

@@ -8,7 +8,7 @@ import logging
 from functools import cached_property
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from .lib import mei_path, detect_special_attr
+from javspn.core.lib import mei_path, detect_special_attr
 
 
 logger = logging.getLogger(__name__)

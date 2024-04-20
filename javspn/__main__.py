@@ -20,7 +20,7 @@ from tqdm import tqdm
 pretty_errors.configure(display_link=True)
 
 
-from .core.print import TqdmOut
+from javspn.core.print import TqdmOut
 
 
 # 将StreamHandler的stream修改为TqdmOut，以与Tqdm协同工作
@@ -31,16 +31,16 @@ for handler in root_logger.handlers:
 
 logger = logging.getLogger('main')
 
-from .core.lib import mei_path
-from .core.nfo import write_nfo
-from .core.config import cfg, args
-from .core.file import *
-from .core.func import *
-from .core.image import *
-from .core.datatype import Movie, MovieInfo
-from .web.base import download
-from .web.exceptions import *
-from .web.translate import translate_movie_info
+from javspn.core.lib import mei_path
+from javspn.core.nfo import write_nfo
+from javspn.core.config import cfg, args
+from javspn.core.file import *
+from javspn.core.func import *
+from javspn.core.image import *
+from javspn.core.datatype import Movie, MovieInfo
+from javspn.web.base import download
+from javspn.web.exceptions import *
+from javspn.web.translate import translate_movie_info
 
 actressAliasMap = {}
 if cfg.NFO.fix_actress_name:

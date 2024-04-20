@@ -14,10 +14,10 @@ __all__ = ['scan_movies', 'get_fmt_size', 'get_remaining_path_len', 'replace_ill
 
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from .avid import *
-from .lib import re_escape
-from .config import cfg
-from .datatype import Movie
+from javspn.core.avid import *
+from javspn.core.lib import re_escape
+from javspn.core.config import cfg
+from javspn.core.datatype import Movie
 
 logger = logging.getLogger(__name__)
 failed_items = []

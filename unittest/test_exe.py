@@ -19,7 +19,7 @@ def test_javsp_exe():
     FILE = '300MAAN-642.RIP.f4v'
     try:
         os.system(f"fsutil file createnew {FILE} {size}")
-        exit_code = os.system(f"JavSP.exe --auto-exit --input . --output {tmp_folder}")
+        exit_code = os.system(f"JavSPn.exe --auto-exit --input . --output {tmp_folder}")
         assert exit_code == 0, f"Non-zero exit code: {exit_code}"
         # Check generated files
         files = glob(tmp_folder + '/**/*.*', recursive=True)

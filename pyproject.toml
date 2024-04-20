@@ -24,7 +24,6 @@ requests = "2.31.0"
 tqdm = "4.59.0"
 urllib3 = "1.25.11"
 numpy = "^1.26.4"
-packaging = "^24.0"
 # https://stackoverflow.com/questions/446209/possible-values-from-sys-platform
 cryptography = {version = "42.0.4", markers = "sys_platform == 'linux'"}
 pywin32 = {version = "^306", markers = "sys_platform == 'win32'"}

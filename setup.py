@@ -25,7 +25,7 @@ for file in os.listdir('javspn/web'):
 build_exe = {
     'include_files': include_files,
     "includes": includes,
-    "excludes": ["tkinter", "unittest"],
+    "excludes": ["unittest"],
 }
 
 excutable = Executable(

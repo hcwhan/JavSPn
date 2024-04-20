@@ -11,8 +11,8 @@ import logging
 import subprocess
 import platform
 from datetime import datetime
-from packaging import version
-from colorama import Fore, Style
+import importlib.metadata as meta
+from colorama import Style
 
 # 判断系统是否可以使用tk
 USE_GUI = True
@@ -171,7 +171,7 @@ def check_update(allow_check=True, auto_update=True):
         print('')
 
     # 使用pyinstaller打包exe时生成hook，运行时由该hook将版本信息注入到sys中
-    local_version = getattr(sys, 'javsp_version', None)
+    local_version = meta.version('javspn')
     if not local_version:
         return
     # 检查更新

@@ -41,6 +41,7 @@ English version [here](./README.en-US.md).
 ## 相较于[原项目](https://github.com/Yuukiy/JavSP)的其他特性
 - [x] 支持可选的剧照抓取
 - [x] 支持yunet人脸检测和pphumanseg人体识别用于剪裁一些特殊番号的封面
+- [x] 使用`cx_Freeze`打包，更加轻量化
 
 ## 安装
 

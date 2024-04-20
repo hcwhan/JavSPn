@@ -19,6 +19,11 @@ English version [here](./README.en-US.md).
 [![Latest release](https://img.shields.io/github/v/release/Yuukiy/JavSP)](https://github.com/Yuukiy/JavSP/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
+## 相较于[原项目](https://github.com/Yuukiy/JavSP)的其他特性
+- [x] 支持可选的剧照抓取
+- [x] 支持yunet人脸检测和pphumanseg人体识别用于剪裁一些特殊番号的封面
+- [x] 使用`cx_Freeze`打包，更加轻量化
+
 ## 功能特点
 
 下面这些是一些已实现或待实现的功能，在逐渐实现和完善，如果想到新的功能点也会加进来。
@@ -37,11 +42,6 @@ English version [here](./README.en-US.md).
 - [ ] 保持不同站点间 genre 分类的统一
 - [ ] 不同的运行模式（抓取数据+整理，仅抓取数据）
 - [ ] 可选：所有站点均抓取失败时由人工介入
-
-## 相较于[原项目](https://github.com/Yuukiy/JavSP)的其他特性
-- [x] 支持可选的剧照抓取
-- [x] 支持yunet人脸检测和pphumanseg人体识别用于剪裁一些特殊番号的封面
-- [x] 使用`cx_Freeze`打包，更加轻量化
 
 ## 安装
 

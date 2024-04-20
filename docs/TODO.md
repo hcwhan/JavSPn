@@ -3,3 +3,4 @@
 - [ ] TUI
 - [ ] More modes: Patch modes?
 - [ ] Generate version from tag
+- [ ] Limit scraping request on a per-site base

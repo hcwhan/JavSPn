@@ -45,18 +45,18 @@ English version [here](./README.en-US.md).
 
 ## 安装
 
-- 想要快速上手？
+- 快速上手
 
 	前往[软件发布页](https://github.com/Yuukiy/JavSP/releases/latest)下载最新版本的软件，无需安装额外工具，开箱即用
 
-- 更喜欢源代码？
+- 通过源代码构建
 
-	请确保已安装 Python （此项目以 Python 3.9 开发）
+	请确保已安装 Python （此项目以 Python 3.9 开发）以及Poetry
 	```
 	git clone --recurse-submodules https://github.com/Yuukiy/JavSP.git
 	cd JavSP
-	pip install -r requirements.txt
-	python JavSP.py
+	poetry install
+	poetry run javspn
 	```
 
 ## 使用

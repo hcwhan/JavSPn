@@ -8,14 +8,19 @@ By grabbing the	bangou in the file name, JavSP can pull data from multiple websi
 
 **Docker & WebUI**: Due to limited time and energy, there's no Docker support yet. On top of that, User Interface is not one of the primary goal for this [project](https://github.com/Yuukiy/JavSP/issues/148). If you need Docker support, maybe you can give [JavSP-Docker](https://github.com/tetato/JavSP-Docker) a try.
 
-**i18n**: This project currently supports only Chinese. [Vote here](https://github.com/Yuukiy/JavSP/discussions/157) for i18n support.
+**i18n**: This is a work in progress, we currently only have a English README available.
 
 ![License](https://img.shields.io/github/license/Yuukiy/JavSP)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
-![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
-[![Crawlers test](https://img.shields.io/github/actions/workflow/status/Yuukiy/JavSP/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
-[![Latest release](https://img.shields.io/github/v/release/Yuukiy/JavSP)](https://github.com/Yuukiy/JavSP/releases/latest)
+![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)
+[![Crawlers test](https://img.shields.io/github/actions/workflow/status/glyh/JavSPn/test-web-funcs.yml?label=crawlers%20test)](https://github.com/Yuukiy/JavSP/actions/workflows/test-web-funcs.yml)
+[![Latest release](https://img.shields.io/github/v/release/Yuukiy/JavSP)](https://github.com/glyh/JavSPn/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+## Features compared to [upstream](https://github.com/Yuukiy/JavSP)
+- [ ] Crawls stage photos(optional).
+- [ ] Support cropping cover with either: 1. face detection with yunet; 2. body segmentation with pphumanseg.
+- [ ] Use `cx_Freeze` to package, which is smaller in size.
 
 ## Features
 
@@ -43,14 +48,14 @@ This is a non-exhaustive list of implemented and unimplemented features being re
 	Visit [Github Release Page](https://github.com/Yuukiy/JavSP/releases/latest) and download the latest portable version of JavSP (Windows Only).
 
 - Buliding from source
-  - Ensure you have Python >= 3.8
+  - Ensure you have Python >= 3.9
   - Run the following
 
 	```
 	git clone https://github.com/Yuukiy/JavSP.git
 	cd JavSP
-	pip install -r requirements.txt
-	python JavSP.py
+	poetry install
+	poetry run javspn
 	```
 
 ## Usage

@@ -39,8 +39,8 @@ English version [here](./README.en-US.md).
 - [ ] 可选：所有站点均抓取失败时由人工介入
 
 ## 相较于[原项目](https://github.com/Yuukiy/JavSP)的其他特性
-- [ ] 支持可选的剧照抓取
-- [ ] 支持yunet人脸检测和pphumanseg人体识别用于剪裁一些特殊番号的封面
+- [x] 支持可选的剧照抓取
+- [x] 支持yunet人脸检测和pphumanseg人体识别用于剪裁一些特殊番号的封面
 
 ## 安装
 

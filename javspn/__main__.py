@@ -681,7 +681,6 @@ def entry():
     colorama.init(autoreset=True)
     # python版本检查
     import platform
-    from distutils.version import LooseVersion
     py_version_ok = LooseVersion(platform.python_version()) >= LooseVersion('3.8')
     error_exit(py_version_ok, '请使用3.8及以上版本的Python')
     # 检查更新

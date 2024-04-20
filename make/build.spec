@@ -1,5 +1,4 @@
-# -*- mode: python ; coding: utf-8 -*-
-import os
+# -*- mode: python ; coding: utf-8 -*- import os
 import inspect
 import cloudscraper
 import glob
@@ -10,7 +9,7 @@ cloudscraper_json = cloudscraper_dir + '/user_agent/browsers.json'
 
 # generate crawlers list (exlcude list is not needed here)
 all_crawlers = []
-for file in os.listdir('../web'):
+for file in os.listdir('../javspn/web'):
     name, ext = os.path.splitext(file)
     if ext == '.py':
         all_crawlers.append('web.' + name)
@@ -22,7 +21,7 @@ ico_file = os.path.abspath(os.path.join(SPECPATH, "../image/JavSP.ico"))
 
 datas = [
      (cloudscraper_json, 'cloudscraper/user_agent'),
-     ("../core/config.ini", "."),
+     ("../javspn/core/config.ini", "."),
      ("../image/sub_mark.png", "image"),
      (ico_file, "image")
  ]
@@ -34,7 +33,7 @@ for glob_pattern in globs:
         dir_path = os.path.dirname(file)
         datas.append((file, os.path.relpath(dir_path, '..')))
 
-a = Analysis(['../JavSP.py'],
+a = Analysis(['../javspn/JavSP.py'],
              pathex=['build'],
              binaries=[],
              datas = datas,

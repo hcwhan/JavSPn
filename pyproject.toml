@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "JavSPn"
+version = "0.1.0"
+description = ""
+authors = ["glyh <lyhokia@gmail.com>", "Yuukiy <76897913+Yuukiy@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "<3.13,>=3.9"
+altgraph = "0.17"
+baidu-aip = "2.2.18.0"
+certifi = "2023.7.22"
+chardet = "4.0.0"
+cloudscraper = "1.2.71"
+colorama = "0.4.4"
+future = "0.18.3"
+idna = "3.7"
+lxml = "4.9.1"
+pillow = "10.3.0"
+pretty-errors = "1.2.19"
+pycryptodome = "3.19.1"
+pysocks = "1.7.1"
+requests = "2.31.0"
+tqdm = "4.59.0"
+urllib3 = "1.25.11"
+numpy = "^1.26.4"
+packaging = "^24.0"
+# https://stackoverflow.com/questions/446209/possible-values-from-sys-platform
+cryptography = {version = "42.0.4", markers = "sys_platform == 'linux'"}
+pywin32 = {version = "^306", markers = "sys_platform == 'win32'"}
+pywin32-ctypes = {version = "^0.2.2", markers = "sys_platform == 'win32'"}
+
+[tool.poetry.scripts]
+javspn = "javspn.__main__:entry"
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

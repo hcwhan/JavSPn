@@ -28,9 +28,16 @@ build_exe = {
     "excludes": ["tkinter", "unittest"],
 }
 
+excutable = Executable(
+    "./javspn/__main__.py", 
+    target_name='JavSPn', 
+    base=base,
+    icon="./image/JavSP.ico",
+)
+
 setup(
     name='JavSPn',
     options = {'build_exe': build_exe}, 
-    executables=[Executable("./javspn/__main__.py", target_name='JavSPn', base=base)]
+    executables=[]
 )
 

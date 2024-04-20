@@ -22,3 +22,5 @@ pywin32-ctypes==0.2.0
 # dependencies for ai crop
 numpy
 opencv-python
+# for packaging
+pyinstaller

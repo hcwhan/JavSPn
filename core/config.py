@@ -403,6 +403,7 @@ def parse_args():
     parser.add_argument('--data-cache-file', help='存储数据的缓存文件，临时文件，供进程间通信使用')
     parser.add_argument('--only-scan', action='store_true', help='仅识别，不刮削')
     parser.add_argument('--only-fetch', action='store_true', help='仅刮削data-cache-file缓存文件中的数据')
+    parser.add_argument('--no-update', action='store_true', help='不检查更新')
     # 忽略无法识别的参数，避免传入供pytest使用的参数时报错
     args, unknown = parser.parse_known_args()
 

@@ -3,7 +3,6 @@ import os
 import sys
 import logging
 from urllib.parse import urlsplit
-from requests.exceptions import ConnectionError
 
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))

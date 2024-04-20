@@ -13,7 +13,6 @@ from lxml import etree
 from lxml.html.clean import Cleaner
 from requests.models import Response
 
-
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from ..core.config import cfg
 
@@ -106,18 +105,31 @@ class DownloadProgressBar(tqdm):
             self.total = tsize
         self.update(b * bsize - self.n)
 
-
-def request_get(url, cookies={}, timeout=cfg.Network.timeout, delay_raise=False):
+# TODO: add rate limit
+def request_get(url, delay_raise=False, **kw):
     """获取指定url的原始请求"""
-    r = requests.get(url, headers=headers, proxies=cfg.Network.proxy, cookies=cookies, timeout=timeout)
+    if not 'proxies' in kw:
+        kw['proxies'] = cfg.Network.proxy
+    if not 'timeout' in kw:
+        kw['timeout'] = cfg.Network.timeout
+    if not 'cookies' in kw:
+        kw['cookies'] = {}
+
+    r = requests.get(url, headers=headers, **kw)
     if not delay_raise:
         r.raise_for_status()
     return r
 
 
-def request_post(url, data, cookies={}, timeout=cfg.Network.timeout, delay_raise=False):
+def request_post(url, delay_raise=False, **kw):
     """向指定url发送post请求"""
-    r = requests.post(url, data=data, headers=headers, proxies=cfg.Network.proxy, cookies=cookies, timeout=timeout)
+    if not 'proxies' in kw:
+        kw['proxies'] = cfg.Network.proxy
+    if not 'timeout' in kw:
+        kw['timeout'] = cfg.Network.timeout
+    if not 'cookies' in kw:
+        kw['cookies'] = {}
+    r = requests.post(url, headers=headers, **kw)
     if not delay_raise:
         r.raise_for_status()
     return r

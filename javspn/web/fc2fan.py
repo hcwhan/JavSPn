@@ -5,11 +5,10 @@ import re
 import sys
 import logging
 import lxml.html
-import requests
 
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from javspn.web.base import resp2html
+from javspn.web.base import request_get, resp2html
 from javspn.web.exceptions import *
 from javspn.core.config import cfg
 from javspn.core.datatype import MovieInfo
@@ -29,7 +28,7 @@ def parse_data(movie: MovieInfo):
         html = lxml.html.parse(html_file)
     else:
         url = f"https://fc2club.top/html/{movie.dvdid}.html"
-        r = requests.get(url)
+        r = request_get(url)
         if r.status_code == 404:
             raise MovieNotFoundError(__name__, movie.dvdid)
         elif r.text == '':

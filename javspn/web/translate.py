@@ -6,8 +6,8 @@ import time
 import uuid
 import random
 import logging
-import requests
 from hashlib import md5
+from javspn.web.base import request_get, request_post
 
 
 __all__ = ['translate', 'translate_movie_info']
@@ -124,7 +124,7 @@ def bing_translate(texts, to='zh-Hans'):
         'X-ClientTraceId': str(uuid.uuid4())
     }
     body = [{'text': texts}]
-    r = requests.post(api_url, params=params, headers=headers, json=body)
+    r = request_post(api_url, params=params, headers=headers, json=body)
     result = r.json()
     return result
 
@@ -145,7 +145,7 @@ def baidu_translate(texts, to='zh'):
     wait = 1.0 - (now - last_access)
     if wait > 0:
         time.sleep(wait)
-    r = requests.post(api_url, params=payload, headers=headers)
+    r = request_post(api_url, params=payload, headers=headers)
     result = r.json()
     baidu_translate._last_access = time.perf_counter()
     return result
@@ -158,11 +158,11 @@ def google_trans(texts, to='zh_CN'):
     # client参数的选择: https://github.com/lmk123/crx-selection-translate/issues/223#issue-184432017
     global _google_trans_wait
     url = f"http://translate.google.com/translate_a/single?client=at&dt=t&dj=1&ie=UTF-8&sl=auto&tl={to}&q=" + texts
-    r = requests.get(url, proxies=cfg.Network.proxy)
+    r = request_get(url, proxies=cfg.Network.proxy)
     while r.status_code == 429:
         logger.warning(f"HTTP {r.status_code}: {r.reason}: Google翻译请求超限，将等待{_google_trans_wait}秒后重试")
         time.sleep(_google_trans_wait)
-        r = requests.get(url, proxies=cfg.Network.proxy)
+        r = request_get(url, proxies=cfg.Network.proxy)
         if r.status_code == 429:
             _google_trans_wait += random.randint(60, 90)
     if r.status_code == 200:

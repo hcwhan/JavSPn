@@ -28,7 +28,7 @@ build_exe = {
     "excludes": ["unittest"],
 }
 
-excutable = Executable(
+javspn = Executable(
     "./javspn/__main__.py", 
     target_name='JavSPn', 
     base=base,
@@ -38,6 +38,6 @@ excutable = Executable(
 setup(
     name='JavSPn',
     options = {'build_exe': build_exe}, 
-    executables=[]
+    executables=[javspn]
 )
 

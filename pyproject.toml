@@ -42,6 +42,7 @@ priority = "primary"
 pytest = "^8.1.1"
 flake8 = "^7.0.0"
 cx-freeze = "^6.15.16"
+types-lxml = "^2024.4.14"
 
 [build-system]
 requires = ["poetry-core"]

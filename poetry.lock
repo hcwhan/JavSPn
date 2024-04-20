@@ -336,6 +336,22 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 reference = "mirrors"
 
 [[package]]
+name = "cssselect"
+version = "1.2.0"
+description = "cssselect parses CSS3 Selectors and translates them to XPath 1.0"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "cssselect-1.2.0-py2.py3-none-any.whl", hash = "sha256:da1885f0c10b60c03ed5eccbb6b68d6eff248d91976fcde348f395d54c9fd35e"},
+    {file = "cssselect-1.2.0.tar.gz", hash = "sha256:666b19839cfaddb9ce9d36bfe4c969132c647b92fc9088c4e23f786b30f1b3dc"},
+]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
 name = "cx-freeze"
 version = "6.15.16"
 description = "Create standalone executables from Python scripts"
@@ -1198,6 +1214,81 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 reference = "mirrors"
 
 [[package]]
+name = "types-beautifulsoup4"
+version = "4.12.0.20240229"
+description = "Typing stubs for beautifulsoup4"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-beautifulsoup4-4.12.0.20240229.tar.gz", hash = "sha256:e37e4cfa11b03b01775732e56d2c010cb24ee107786277bae6bc0fa3e305b686"},
+    {file = "types_beautifulsoup4-4.12.0.20240229-py3-none-any.whl", hash = "sha256:000cdddb8aee4effb45a04be95654de8629fb8594a4f2f1231cff81108977324"},
+]
+
+[package.dependencies]
+types-html5lib = "*"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "types-html5lib"
+version = "1.1.11.20240228"
+description = "Typing stubs for html5lib"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-html5lib-1.1.11.20240228.tar.gz", hash = "sha256:22736b7299e605ec4ba539d48691e905fd0c61c3ea610acc59922232dc84cede"},
+    {file = "types_html5lib-1.1.11.20240228-py3-none-any.whl", hash = "sha256:af5de0125cb0fe5667543b158db83849b22e25c0e36c9149836b095548bf1020"},
+]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "types-lxml"
+version = "2024.4.14"
+description = "Complete lxml external type annotation"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types_lxml-2024.4.14-py3-none-any.whl", hash = "sha256:7e5f836067cde4fddce3cdbf2bac7192c764bf5ee6d3eb86c732ad1b84f265c5"},
+    {file = "types_lxml-2024.4.14.tar.gz", hash = "sha256:dd8105b579925af1b6ae77469f4fc835be3872b15e86cb46ad4fcc33b20c781d"},
+]
+
+[package.dependencies]
+cssselect = ">=1.2,<2.0"
+types-beautifulsoup4 = ">=4.12,<5.0"
+typing-extensions = ">=4.5,<5.0"
+
+[package.extras]
+test = ["beautifulsoup4 (>=4.8,<5.0)", "html5lib (==1.1)", "lxml (>=4.9)", "mypy (==1.9.*)", "pyright (>=1.1.289)", "pytest (>=7.0,<9)", "pytest-mypy-plugins (==1.11.1)", "tox (>=4.0,<5.0)", "typeguard (>=3.0,<5)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "typing-extensions"
+version = "4.11.0"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typing_extensions-4.11.0-py3-none-any.whl", hash = "sha256:c1f94d72897edaf4ce775bb7558d5b79d8126906a14ea5ed1635921406c0387a"},
+    {file = "typing_extensions-4.11.0.tar.gz", hash = "sha256:83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"},
+]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
 name = "urllib3"
 version = "1.25.11"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -1240,4 +1331,4 @@ reference = "mirrors"
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.13,>=3.9"
-content-hash = "8932d0a239a9f1d3c57302eba2a46222471e9c89370037719f35bdbf712e03a5"
+content-hash = "181fccef8c8e2345c491a4b556e0b5c09ca0c19d6a5cb67337f7e5be66495592"

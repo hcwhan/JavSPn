@@ -263,7 +263,6 @@ def norm_boolean(cfg: Config):
             ('Picture', 'add_label_to_cover'),
             ('NFO', 'add_genre_to_tag'),
             ('Other', 'check_update'),
-            ('Other', 'auto_update'),
             ('File', 'enable_file_move'),
         ]:
         cfg._sections[sec][key] = cfg.getboolean(sec, key)

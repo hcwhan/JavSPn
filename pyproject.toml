@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "JavSPn"
-version = "2.0.0"
+version = "2.0.1"
 description = ""
 authors = ["glyh <lyhokia@gmail.com>", "Yuukiy <76897913+Yuukiy@users.noreply.github.com>"]
 readme = "README.md"

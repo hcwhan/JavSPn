@@ -129,7 +129,7 @@ def request_post(url, delay_raise=False, **kw):
         kw['timeout'] = cfg.Network.timeout
     if not 'cookies' in kw:
         kw['cookies'] = {}
-    r = requests.post(url, **kw)
+    r = requests.post(url, headers=headers, **kw)
     if not delay_raise:
         r.raise_for_status()
     return r

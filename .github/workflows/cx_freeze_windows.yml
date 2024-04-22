@@ -4,11 +4,17 @@ name: Cx_Freeze on Windows
 
 # Controls when the workflow will run
 on:
-  workflow_run:
-    workflows: ["Pull Dependencies on Windows"]
-    branches: [master]
-    types: 
-      - completed
+  # Triggers the workflow on push or pull request events
+  push:
+    branches:
+    - master
+    - premerge
+    - JavSPn
+  pull_request:
+    branches:
+    - master
+    - premerge
+    - JavSPn
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,8 +24,33 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@master
+    runs-on: windows-latest
+    env:
+      PYTEST_ADDOPTS: "-rA --color=yes --tb=long --showlocals"
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      - name: Fetch tags
+        run: git fetch --prune --unshallow --tags
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+          cache: 'poetry'
+
+      - name: Install dependencies
+        run: |
+          poetry install
+
       - name: Build with Cx_Freeze for windows
         run: poetry run python setup.py build_exe -b dist
 

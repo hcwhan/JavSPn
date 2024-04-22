@@ -4,21 +4,43 @@
 name: "Unit Test: basic functions"
 
 on:
-  workflow_run:
-    workflows: ["Pull Dependencies on Windows"]
-    branches: [master]
-    types: 
-      - completed
-
+  push:
+    branches:
+    - master
+    - premerge
+    - JavSPn
+  pull_request:
+    branches:
+    - master
+    - premerge
+    - JavSPn
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   test-basic-funcs:
 
-    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@master
+    runs-on: windows-latest
+    env:
+      PYTHONIOENCODING: "utf-8"
+      PYTEST_ADDOPTS: "-rA --color=yes --tb=long --showlocals"
 
     steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'true'
+
+    - name: Install poetry
+      run: pipx install poetry
+
+    - name: Setup Python 3.9
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.9
+        cache: 'poetry'
+    - name: Install dependencies
+      run: |
+        poetry install
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names

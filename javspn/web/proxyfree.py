@@ -40,20 +40,20 @@ def _choose_one(urls) -> str:
 
 
 def _get_avsox_urls() -> list:
-    html = get_html('https://tellme.pw/avsox')
+    html = get_html('https://tellme.pw/avsox', proxies={})
     urls = html.xpath('//h4/strong/a/@href')
     return urls
 
 
 def _get_javbus_urls() -> list:
-    html = get_html('https://www.javbus.one/')
+    html = get_html('https://www.javbus.one/', proxies={})
     text = html.text_content()
     urls = re.findall(r'防屏蔽地址：(https://(?:[\d\w][-\d\w]{1,61}[\d\w]\.){1,2}[a-z]{2,})', text, re.I | re.A)
     return urls
 
 
 def _get_javlib_urls() -> list:
-    html = get_html('https://github.com/javlibcom')
+    html = get_html('https://github.com/javlibcom', proxies={})
     text = html.xpath("//div[@class='p-note user-profile-bio mb-3 js-user-profile-bio f4']")[0].text_content()
     match = re.search(r'[\w\.]+', text, re.A)
     if match:
@@ -62,11 +62,11 @@ def _get_javlib_urls() -> list:
 
 
 def _get_javdb_urls() -> list:
-    html = get_html('https://jav524.app')
+    html = get_html('https://jav524.app', proxies={})
     js_links = html.xpath("//script[@src]/@src")
     for link in js_links:
         if '/js/index' in link:
-            text = get_resp_text(request_get(link))
+            text = get_resp_text(request_get(link, proxies={}))
             match = re.search(r'\$officialUrl\s*=\s*"(https://(?:[\d\w][-\d\w]{1,61}[\d\w]\.){1,2}[a-z]{2,})"', text, flags=re.I | re.A)
             if match:
                 return [match.group(1)]

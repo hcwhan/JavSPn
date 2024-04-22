@@ -144,9 +144,9 @@ def get_resp_text(resp: Response, encoding=None):
     return resp.text
 
 
-def get_html(url, encoding='utf-8'):
+def get_html(url, encoding='utf-8', **kw):
     """使用get方法访问指定网页并返回经lxml解析后的document"""
-    resp = request_get(url)
+    resp = request_get(url, **kw)
     text = get_resp_text(resp, encoding=encoding)
     html = lxml.html.fromstring(text)
     html.make_links_absolute(url, resolve_base_href=True)

@@ -4,15 +4,14 @@
 name: "Unit Test: web-based functions"
 
 on:
-  push:
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+  workflow_run:
+    workflows: ["Pull Dependencies on Windows"]
+    branches: [master]
+    types: 
+      - completed
   schedule:
-  # Web crawlers might be outdated because of website updating, so run periodically to follow the changes
-  - cron: '9 9 * * 3,6,0'
+    # Web crawlers might be outdated because of website updating, so run periodically to follow the changes
+    - cron: '9 9 * * 3,6,0'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

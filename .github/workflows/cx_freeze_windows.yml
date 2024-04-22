@@ -4,12 +4,11 @@ name: Cx_Freeze on Windows
 
 # Controls when the workflow will run
 on:
-  push:
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+  workflow_run:
+    workflows: ["Pull Dependencies on Windows"]
+    branches: [master]
+    types: 
+      - completed
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

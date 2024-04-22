@@ -7,13 +7,9 @@ on:
   push:
     branches:
     - master
-    - premerge
-    - JavSPn
   pull_request:
     branches:
     - master
-    - premerge
-    - JavSPn
   schedule:
   # Web crawlers might be outdated because of website updating, so run periodically to follow the changes
   - cron: '9 9 * * 3,6,0'

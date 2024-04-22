@@ -13,3 +13,6 @@ def test_get_url():
 def test_get_url_with_prefer():
     prefer_url = 'https://www.baidu.com'
     assert prefer_url == get_proxy_free_url('javlib', prefer_url)
+
+if __name__ == "__main__":
+    print(get_proxy_free_url('javlib'))

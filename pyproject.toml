@@ -17,9 +17,9 @@ requests = "2.31.0"
 tqdm = "4.59.0"
 numpy = "^1.26.4"
 # https://stackoverflow.com/questions/446209/possible-values-from-sys-platform
-cryptography = {version = "42.0.4", markers = "sys_platform == 'linux'"}
 pywin32 = {version = "^306", markers = "sys_platform == 'win32'"}
 pywin32-ctypes = {version = "^0.2.2", markers = "sys_platform == 'win32'"}
+cryptography = "^42.0.5"
 
 [tool.poetry.scripts]
 javspn = "javspn.__main__:entry"

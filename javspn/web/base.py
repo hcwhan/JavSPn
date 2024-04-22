@@ -166,10 +166,9 @@ def resp2html(resp, encoding='utf-8') -> lxml.html.HtmlElement:
     return html
 
 
-def post_html(url, data, encoding='utf-8', **kw) -> lxml.html.HtmlElement:
+def post_html(url, encoding='utf-8', **kw) -> lxml.html.HtmlElement:
     """使用post方法访问指定网页并返回经lxml解析后的document"""
-    resp = request_post(url, data, **kw)
-    print(resp.status_code)
+    resp = request_post(url, **kw)
     text = get_resp_text(resp, encoding=encoding)
     html = lxml.html.fromstring(text)
     # jav321提供ed2k形式的资源链接，其中的非ASCII字符可能导致转换失败，因此要先进行处理

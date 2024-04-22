@@ -23,27 +23,8 @@ on:
 jobs:
   test-web-crawlers:
 
-    runs-on: windows-latest
-    env:
-      PYTHONIOENCODING: "utf-8"
-      PYTEST_ADDOPTS: "-rA --color=yes --tb=long --showlocals"
-
+    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@main
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: 'true'
-
-    - name: Install poetry
-      run: pipx install poetry
-
-    - name: Setup Python 3.9
-      uses: actions/setup-python@v5
-      with:
-        python-version: 3.9
-        cache: 'poetry'
-    - name: Install dependencies
-      run: |
-        poetry install
     - name: Switch code page
       run: |
         chcp 65001

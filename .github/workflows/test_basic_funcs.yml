@@ -16,7 +16,7 @@ on:
 jobs:
   test-basic-funcs:
 
-    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@main
+    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@master
 
     steps:
     - name: Lint with flake8

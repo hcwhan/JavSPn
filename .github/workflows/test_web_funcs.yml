@@ -19,7 +19,7 @@ on:
 jobs:
   test-web-crawlers:
 
-    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@main
+    runs-on: glyh/JavSPn/.github/workflows/pull_dependencies.yml@master
     steps:
     - name: Switch code page
       run: |

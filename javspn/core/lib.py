@@ -2,6 +2,7 @@
 import os
 import re
 import sys
+from pathlib import Path
 
 
 __all__ = ['re_escape', 'mei_path', 'strftime_to_minutes', 'detect_special_attr']
@@ -14,9 +15,14 @@ def re_escape(s: str) -> str:
     return pattern
 
 
-def mei_path(path):
+def mei_path(path: str) -> str:
     """获取一个随代码打包的文件在解压后的路径"""
-    return path
+    if getattr(sys, "frozen", False):
+        return path
+    else:
+        path_joined = Path(__file__).parent.parent.parent / path
+        print(path, path_joined)
+        return str(path_joined)
 
 
 def strftime_to_minutes(s: str) -> int:

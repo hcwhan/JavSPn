@@ -9,20 +9,21 @@ from tqdm import tqdm
 
 pretty_errors.configure(display_link=True)
 
-
 file_dir = os.path.dirname(__file__)
 data_dir = os.path.abspath(os.path.join(file_dir, '../unittest/data'))
-sys.path.insert(0, os.path.abspath(os.path.join(file_dir, '..')))
+scraper_dir = os.path.abspath(os.path.join(file_dir, '../javspn/web'))
+sys.path.insert(0, os.path.abspath(os.path.join(file_dir, '../javspn/')))
 from javspn.core.datatype import MovieInfo
 
 
 # 搜索抓取器并导入它们
 all_crawler = {}
 exclude_files = ['fc2fan']
-for file in os.listdir('web'):
+for file in os.listdir(scraper_dir):
     name, ext = os.path.splitext(file)
+    print(file)
     if ext == '.py' and name not in exclude_files:
-        modu = 'web.' + name
+        modu = 'javspn.web.' + name
         __import__(modu)
         if hasattr(sys.modules[modu], 'parse_data'):
             parser = getattr(sys.modules[modu], 'parse_data')
@@ -83,5 +84,6 @@ if __name__ == "__main__":
             used = [names[i] for i in valid_indexes]
         else:
             used = names
+        print(f"Crawling using {names}")
         # 开始抓取数据
         call_crawlers(dvdid_list, used)

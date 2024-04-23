@@ -21,7 +21,6 @@ def mei_path(path: str) -> str:
         return path
     else:
         path_joined = Path(__file__).parent.parent.parent / path
-        print(path, path_joined)
         return str(path_joined)
 
 

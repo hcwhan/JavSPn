@@ -16,7 +16,6 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from Crypto.Cipher import AES
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import core.config   # to init the logging module
 
 logger = logging.getLogger(__name__)
 

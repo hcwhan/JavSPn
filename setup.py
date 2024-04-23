@@ -3,8 +3,8 @@ import os
 from typing import List, Tuple
 from cx_Freeze import setup, Executable
 
-# base="Win32GUI" should be used only for Windows GUI app
-base = "Win32GUI" if sys.platform == "win32" else None
+# https://github.com/marcelotduarte/cx_Freeze/issues/1288
+base = None
 
 proj_root = os.path.abspath(os.path.dirname(__file__))
 

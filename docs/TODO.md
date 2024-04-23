@@ -1,8 +1,0 @@
-- [ ] Sanitize Log generation
-- [ ] Type annotations
-- [ ] TUI
-- [ ] More modes: Patch modes?
-- [ ] Generate version from tag
-- [ ] Limit scraping request on a per-site base
-- [ ] Get subtitles from websites
-- [ ] Maintain metadata in an SQLite Database

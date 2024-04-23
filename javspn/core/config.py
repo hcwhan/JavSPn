@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import re
 import sys
@@ -9,6 +11,8 @@ from shutil import copyfile
 from string import Template
 
 from javspn.core.lib import re_escape
+
+from typing import Dict
 
 __all__ = ['cfg', 'args', 'is_url']
 
@@ -25,17 +29,6 @@ def rel_path_from_exe(path):
     # 确保返回的是绝对路径（__file__可能引入相对路径）
     abs_path = os.path.abspath(os.path.join(rel_start, path))
     return abs_path
-
-
-def gen_backup_path(path):
-    """为给定文件生成一个备份路径（必要时增加序号以避免覆盖现有文件）"""
-    abspath = os.path.abspath(path)
-    backup_path = abspath + '.bak'
-    i = 1
-    while os.path.exists(backup_path):
-        backup_path = abspath + '.' + str(i) + '.bak'
-        i += 1
-    return backup_path
 
 
 def log_filter(record):
@@ -122,6 +115,19 @@ class DotDict(dict):
     __setattr__ = dict.__setitem__
     __delattr__ = dict.__delitem__
 
+class CfgObj(object):
+    def __init__(self) -> None:
+        self.__backed: Dict[str, CfgObj] = {}
+    def __getattr__(self, name: str, /) -> CfgObj:
+        if name == '__backed':
+            print('lol')
+            return object.__getattribute__(self, name)
+        if name in self.__backed:
+            return self.__backed[name]
+        else:
+            ret = CfgObj()
+            self.__backed[name] = ret
+            return ret
 
 class Config(configparser.ConfigParser):
     def __init__(self, **kwargs):

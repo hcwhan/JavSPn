@@ -14,7 +14,7 @@ from lxml.html.clean import Cleaner
 from requests.models import Response
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from ..core.config import cfg
+from javspn.core.config import cfg
 
 
 __all__ = ['Request', 'get_html', 'post_html', 'request_get', 'resp2html', 'is_connectable', 'download', 'get_resp_text']

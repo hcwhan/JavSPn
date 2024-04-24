@@ -8,13 +8,9 @@ on:
   push:
     branches:
     - master
-    - premerge
-    - JavSPn
   pull_request:
     branches:
     - master
-    - premerge
-    - JavSPn
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,7 +27,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: 'true'
 
@@ -63,7 +59,7 @@ jobs:
           echo "VERSION=$(poetry run python scripts/version.py)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: JavSPn-${{ env.VERSION }}-Windows-amd64
           path: dist

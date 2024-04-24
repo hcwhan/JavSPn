@@ -7,13 +7,9 @@ on:
   push:
     branches:
     - master
-    - premerge
-    - JavSPn
   pull_request:
     branches:
     - master
-    - premerge
-    - JavSPn
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -26,7 +22,7 @@ jobs:
       PYTEST_ADDOPTS: "-rA --color=yes --tb=long --showlocals"
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: 'true'
 
@@ -60,7 +56,7 @@ jobs:
       run: |
         poetry run pytest unittest/test_func.py
     - name: Upload log as artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       if: ${{ always() }}
       with:
         name: JavSP-basic-funcs.log

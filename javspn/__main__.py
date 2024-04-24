@@ -1,6 +1,5 @@
 import os, re, sys, json, time, logging, requests, threading
 import colorama, pretty_errors
-from distutils.version import LooseVersion
 from shutil import copyfile
 from typing import Dict, List
 from colorama import Fore, Style
@@ -651,11 +650,11 @@ def only_fetch():
 
 def entry():
 
-    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8') # type: ignore
 
     pretty_errors.configure(display_link=True)
 
-# 将StreamHandler的stream修改为TqdmOut，以与Tqdm协同工作
+    # 将StreamHandler的stream修改为TqdmOut，以与Tqdm协同工作
     root_logger = logging.getLogger()
     for handler in root_logger.handlers:
         if type(handler) == logging.StreamHandler:
@@ -672,10 +671,6 @@ def entry():
             actressAliasMap = json.load(file)
         colorama.init(autoreset=True)
 
-    # python版本检查
-    import platform
-    py_version_ok = LooseVersion(platform.python_version()) >= LooseVersion('3.8')
-    error_exit(py_version_ok, '请使用3.8及以上版本的Python')
     # 检查更新
     version_info = 'JavSP ' + getattr(sys, 'javsp_version', '未知版本/从代码运行')
     logger.debug(version_info.center(60, '='))

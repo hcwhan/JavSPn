@@ -59,7 +59,6 @@ def parallel_crawler(movie: Movie, tqdm_bar=None):
     def wrapper(parser, info: MovieInfo, retry):
         """对抓取器函数进行包装，便于更新提示信息和自动重试"""
         crawler_name = threading.current_thread().name
-        task_info = f'Crawler: {crawler_name}: {info.dvdid}'
         for cnt in range(retry):
             try:
                 parser(info)

@@ -1,36 +1,12 @@
-import os
-import re
-import sys
-import json
-import time
-import logging
+import os, re, sys, json, time, logging, requests, threading
+import colorama, pretty_errors
 from distutils.version import LooseVersion
-import requests
-import threading
 from shutil import copyfile
 from typing import Dict, List
-
-sys.stdout.reconfigure(encoding='utf-8')
-
-import colorama
-import pretty_errors
 from colorama import Fore, Style
 from tqdm import tqdm
 
-
-pretty_errors.configure(display_link=True)
-
-
 from javspn.core.print import TqdmOut
-
-
-# 将StreamHandler的stream修改为TqdmOut，以与Tqdm协同工作
-root_logger = logging.getLogger()
-for handler in root_logger.handlers:
-    if type(handler) == logging.StreamHandler:
-        handler.stream = TqdmOut
-
-logger = logging.getLogger('main')
 
 from javspn.core.lib import mei_path
 from javspn.core.nfo import write_nfo
@@ -43,12 +19,8 @@ from javspn.web.base import download
 from javspn.web.exceptions import *
 from javspn.web.translate import translate_movie_info
 
-actressAliasMap = {}
-if cfg.NFO.fix_actress_name:
-    actressAliasFilePath = mei_path("data/ja_JP/aliases/actress_alias.json")
-    with open(actressAliasFilePath, "r", encoding="utf-8") as file:
-        actressAliasMap = json.load(file)
-
+loger: logging.Logger
+actressAliasMap: Dict[str, list[str]]
 
 def resolve_alias(name):
     """将别名解析为固定的名字"""
@@ -678,7 +650,28 @@ def only_fetch():
     return 0
 
 def entry():
-    colorama.init(autoreset=True)
+
+    sys.stdout.reconfigure(encoding='utf-8')
+
+    pretty_errors.configure(display_link=True)
+
+# 将StreamHandler的stream修改为TqdmOut，以与Tqdm协同工作
+    root_logger = logging.getLogger()
+    for handler in root_logger.handlers:
+        if type(handler) == logging.StreamHandler:
+            handler.stream = TqdmOut
+
+    global logger
+    logger = logging.getLogger('main')
+
+    global actressAliasMap
+    actressAliasMap = {}
+    if cfg.NFO.fix_actress_name:
+        actressAliasFilePath = mei_path("data/ja_JP/aliases/actress_alias.json")
+        with open(actressAliasFilePath, "r", encoding="utf-8") as file:
+            actressAliasMap = json.load(file)
+        colorama.init(autoreset=True)
+
     # python版本检查
     import platform
     py_version_ok = LooseVersion(platform.python_version()) >= LooseVersion('3.8')

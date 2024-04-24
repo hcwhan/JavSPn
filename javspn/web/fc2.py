@@ -1,10 +1,7 @@
 """从FC2官网抓取数据"""
-import os
-import sys
 import logging
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import get_html, request_get
 from javspn.web.exceptions import *
 from javspn.core.config import cfg

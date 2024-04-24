@@ -1,10 +1,7 @@
 """从https://gyutto.com/官网抓取数据"""
-import os
-import sys
 import logging
 import time
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import resp2html, request_get
 from javspn.web.exceptions import *
 from javspn.core.datatype import MovieInfo

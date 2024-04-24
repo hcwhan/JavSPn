@@ -1,11 +1,8 @@
 """从jav321抓取数据"""
-import os
 import re
-import sys
 import logging
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import post_html
 from javspn.web.exceptions import *
 from javspn.core.datatype import MovieInfo

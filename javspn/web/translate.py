@@ -13,7 +13,6 @@ from javspn.web.base import request_get, request_post
 __all__ = ['translate', 'translate_movie_info']
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.core.config import cfg
 from javspn.core.datatype import MovieInfo
 

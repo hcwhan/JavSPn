@@ -7,7 +7,6 @@ import logging
 import lxml.html
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import request_get, resp2html
 from javspn.web.exceptions import *
 from javspn.core.config import cfg

@@ -1,12 +1,9 @@
 """从airav抓取数据"""
-import os
 import re
-import sys
 import logging
 from html import unescape
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import Request
 from javspn.web.exceptions import *
 from javspn.core.config import cfg

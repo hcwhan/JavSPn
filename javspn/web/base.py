@@ -1,6 +1,5 @@
 """网络请求的统一接口"""
 import os
-import sys
 import time
 import shutil
 import logging
@@ -13,7 +12,6 @@ from lxml import etree
 from lxml.html.clean import Cleaner
 from requests.models import Response
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.core.config import cfg
 
 

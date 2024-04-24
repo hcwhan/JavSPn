@@ -1,13 +1,10 @@
 """从fanza抓取数据"""
-import os
 import re
-import sys
 import json
 import logging
 from typing import Dict, List, Tuple
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import Request, resp2html
 from javspn.web.exceptions import *
 from javspn.core.config import cfg

@@ -5,7 +5,6 @@ import logging
 from urllib.parse import urlsplit
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from javspn.web.base import Request, resp2html
 from javspn.web.exceptions import *
 from javspn.web.proxyfree import get_proxy_free_url

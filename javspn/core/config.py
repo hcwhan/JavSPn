@@ -338,13 +338,7 @@ def validate_ai_config(cfg: Config):
     piccfg = cfg.Picture
     if not piccfg.use_ai_crop:
         return
-    if piccfg.ai_engine.lower() == 'baidu':
-        piccfg.ai_engine = 'baidu'
-        required_keys = ('aip_appid', 'aip_api_key', 'aip_secret_key')
-        empty_keys = [i for i in required_keys if not piccfg[i]]
-        if empty_keys:
-            logger.error('使用百度人体分析时，相关设置不能为空: ' + ', '.join(empty_keys))
-    elif piccfg.ai_engine.lower() == 'yunet':
+    if piccfg.ai_engine.lower() == 'yunet':
         piccfg.ai_engine = 'yunet'
     elif piccfg.ai_engine.lower() == 'pphumanseg':
         piccfg.ai_engine = 'pphumanseg'

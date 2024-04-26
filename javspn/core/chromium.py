@@ -31,7 +31,7 @@ class Decrypter():
         plaintext = cipher.decrypt_and_verify(ciphertext, tag).decode('utf-8')
         return plaintext
 
-
+# TODO: add Linux support or at least allow user configuration
 def get_browsers_cookies():
     """获取系统上的所有Chromium系浏览器的JavDB的Cookies"""
     # 不予支持: Opera, 360安全&极速, 搜狗使用非标的用户目录或数据格式; QQ浏览器屏蔽站点

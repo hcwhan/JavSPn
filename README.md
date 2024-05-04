@@ -1,4 +1,5 @@
-![JavSP](https://github.com/glyh/JavSPn/blob/master/image/javsp_logo.png?raw=true)
+![JavSPN](./image/JavSPN.svg)
+
 
 English version [here](./README.en-US.md).
 

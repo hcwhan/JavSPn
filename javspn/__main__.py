@@ -516,9 +516,9 @@ def RunNormalMode(all_movies):
                     extrafanartdir = movie.save_dir + '/extrafanart'
                     os.mkdir(extrafanartdir)
                     movie.info.preview_pics = sorted(movie.info.preview_pics)
-                    print(movie.info.preview_pics)
+                    logger.info("获取到剧照：", movie.info.preview_pics)
                     for (id, pic_url) in enumerate(movie.info.preview_pics):
-                        inner_bar.set_description(f"下载剧照{id}")
+                        inner_bar.set_description(f"Downloading extrafanart {id} from url: {pic_url}")
 
                         fanart_destination = f"{extrafanartdir}/{id}.png"
                         try:
@@ -528,7 +528,7 @@ def RunNormalMode(all_movies):
                                 width, height = get_pic_size(pic_path)
                                 elapsed = time.strftime("%M:%S", time.gmtime(info['elapsed']))
                                 speed = get_fmt_size(info['rate']) + '/s'
-                                logger.info(f"已下载剧照{id}: {width}x{height}, {filesize} [{elapsed}, {speed}]")
+                                logger.info(f"已下载剧照{pic_url} {id}.png: {width}x{height}, {filesize} [{elapsed}, {speed}]")
                             else:
                                 check_step(False, f"下载剧照{id}: {pic_url}失败")
                         except:

@@ -1,15 +1,12 @@
-![JavSPN](./image/JavSPN.svg)
-
-
-English version [here](./README.en-US.md).
+![JavSP](./image/JavSPN.svg)
 
 # Jav Scraper Package
 
-**汇总多站点数据的AV元数据刮削器**
+**A Jav(Japanese Adult Video) Scraper that summarizes from multiple websites**
 
-提取影片文件名中的番号信息，自动抓取并汇总多个站点数据的 AV 元数据，按照指定的规则分类整理影片文件，并创建供 Emby、Jellyfin、Kodi 等软件使用的元数据文件
+By grabbing the	bangou in the file name, JavSP can pull data from multiple websites and summarize them, classify them according to a predefined rule and create metadata for softwares like Emby, Jellyfin and Kodi.
 
-**Docker & WebUI**: 由于精力所限，目前还没有做Docker的支持。此外，UI界面也不是[此项目的目标](https://github.com/Yuukiy/JavSP/issues/148)。如果你需要这两个功能，可以试试[@tetato/JavSP-Docker](https://github.com/tetato/JavSP-Docker)
+**Docker & WebUI**: Due to limited time and energy, there's no Docker support yet. On top of that, User Interface is not one of the primary goal for this [project](https://github.com/Yuukiy/JavSP/issues/148). If you need Docker support, maybe you can give [JavSP-Docker](https://github.com/tetato/JavSP-Docker) a try.
 
 **i18n**: This is a work in progress, we currently only have a English README available.
 
@@ -20,86 +17,86 @@ English version [here](./README.en-US.md).
 [![Latest release](https://img.shields.io/github/v/release/glyh/JavSPn)](https://github.com/glyh/JavSPn/releases/latest)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
-## 相较于[原项目](https://github.com/Yuukiy/JavSP)的其他特性
-- [x] 支持可选的剧照抓取
-- [x] 支持yunet人脸检测和pphumanseg人体识别用于剪裁一些特殊番号的封面
-- [x] 使用`cx_Freeze`打包，更加轻量化
-- [x] 遵循pip打包规则，可以作为库调用
+## Features compared to [upstream](https://github.com/Yuukiy/JavSP)
+- [x] Crawls stage photos(optional).
+- [x] Support cropping cover with either: 1. face detection with yunet; 2. body segmentation with pphumanseg.
+- [x] Use `cx_Freeze` to package, which is smaller in size.
+- [x] Adheres to pip packaging standards, and thus can be used as a library.
 
-## 功能特点
+## Features
 
-下面这些是一些已实现或待实现的功能，在逐渐实现和完善，如果想到新的功能点也会加进来。
+This is a non-exhaustive list of implemented and unimplemented features being refined over time.
 
-- [x] 自动识别影片番号
-- [x] 支持处理影片分片
-- [x] 汇总多个站点的数据生成NFO数据文件
-- [x] 每天自动对站点抓取器进行测试
-- [x] 多线程并行抓取
-- [x] 下载高清封面
-- [x] 基于AI人体分析裁剪素人等非常规封面的海报
-- [x] 自动检查<del>和更新</del>新版本
-- [x] 翻译标题和剧情简介
-- [ ] 匹配本地字幕
-- [ ] 使用小缩略图创建文件夹封面
-- [ ] 保持不同站点间 genre 分类的统一
-- [ ] 不同的运行模式（抓取数据+整理，仅抓取数据）
-- [ ] 可选：所有站点均抓取失败时由人工介入
+- [x] Recognize movie ID automagically
+- [x] Dealing with movies separated into multiple parts
+- [x] Summarize information from multiple sites to generate [NFO file](https://jellyfin.org/docs/general/server/metadata/nfo/).
+- [x] Automatic tests for website crawler on a daily basis
+- [x] Parallel data scraping
+- [x] Downloading HD covers
+- [x] AI based cover crop for atypical covers
+- [x] Check new version <del>and self-updating</del>
+- [x] Translating titles and descriptions
+- [ ] Matching local subtitles
+- [ ] Using thumb to create folder cover
+- [ ] Keeping genre consistency across different websites
+- [ ] Different mode of operations(Scraping and Moving, Scrape only)
+- [ ] Optional: Allow user to interveine when there's a conflicts during scrapping.
 
-## 安装
+## Installation
 
-- 快速上手
+- For the impatient
 
-	前往[软件发布页](https://github.com/glyh/JavSPn/releases/latest)下载最新版本的软件，无需安装额外工具，开箱即用
+	Visit [Github Release Page](https://github.com/glyh/JavSPn/releases/latest) and download the latest portable version of JavSP (Windows Only).
 
-- 通过源代码构建
+- Buliding from source
+  - Ensure you have Python >= 3.9
+  - Run the following
 
-	请确保已安装 Python （此项目以 Python 3.9 开发）以及Poetry
 	```
 	git clone --recurse-submodules https://github.com/glyh/JavSPn.git
-	cd JavSPn
+	cd JavSP
 	poetry install
 	poetry run javspn
 	```
 
-## 使用
+## Usage
 
-以任意文本编辑器打开 ```config.ini```，根据各个配置项的说明选择你需要的配置即可。
+You can modify the configuration file `config.ini` to instruct how `JavSP` should work for you.
 
-此外软件也支持从命令行指定运行参数（命令行参数的优先级高于配置文件）。运行 ```JavSP -h``` 查看支持的参数列表
+JavSP also accepts CLI flags and prioritize them over `config.ini`, you can run `JavSP -h` to see a list of supportted flags. 
 
-更详细的使用说明请前往 [JavSP Wiki](https://github.com/Yuukiy/JavSP/wiki) 查看
+For more detailed instructions please visit [JavSP Wiki](https://github.com/Yuukiy/JavSP/wiki)
 
-如果使用的时候遇到问题也欢迎给我反馈😊
+Please file an issue if you find any problem using this software.😊 
 
-## 问题反馈
+## Bug report
 
-如果使用中遇到了 Bug，请[前往 Issue 区反馈](https://github.com/glyh/JavSPn/issues)（提问前请先搜索是否已有类似问题）
-
-
-## 参与贡献
-
-此项目不需要捐赠。如果你想要帮助改进这个项目，欢迎通过以下方式参与进来（并不仅局限于代码）：
-
-- 帮助撰写和改进Wiki
-
-- 帮助完善单元测试数据（不必非要写代码，例如如果你发现有某系列的番号识别不准确，总结一下提issue也是很好的）
-
-- 帮助翻译影片类型，或者帮助标记演员别名，参见[JavSP-meta](https://github.com/glyh/JavSP-meta)
-
-- Bugfix / 新功能？欢迎发 Pull Request
-
-- 要不考虑点个 Star ?（我会很开心的）
+If you encounter any bug that is not already encountered by other users(you can check this by searching through the issue page), don't hesitate to go and [file an isssue](https://github.com/glyh/JavSPn/issues).
 
 
-## 许可
+## Contribution
 
-此项目的所有权利与许可受 GPL-3.0 License 与 [Anti 996 License](https://github.com/996icu/996.ICU/blob/master/LICENSE_CN) 共同限制。此外，如果你使用此项目，表明你还额外接受以下条款：
+No need to buy me any coffee LoL. If you like to help, please help me through these methods:
 
-- 本软件仅供学习 Python 和技术交流使用
+- Help writing and improving the Wiki
 
-- 请勿在微博、微信等墙内的公共社交平台上宣传此项目
+- Help completing the Unit Test (Not necessarilly coding, testcases or insightful obvervations are also welcomed)
 
-- 用户在使用本软件时，请遵守当地法律法规
+- Help translating the genre
 
-- 禁止将本软件用于商业用途
+- Pull Request for bug fix or new feature
+
+- Give me a star (Thank you!)
+
+
+## License
+
+This project is under the restriction of both the GPL-3.0 License and the [Anti 996 License](https://github.com/996icu/996.ICU/blob/master/LICENSE). On top of that, using this software implies that you accept the following terms: 
+- I will only use this software for academic purpose
+
+- I won't advertize this project on any Chinese social media like weibo or wechat.
+
+- I will follow the local government regulation when using this software.
+
+- I will not monetrize this software and make profit out of it.
 

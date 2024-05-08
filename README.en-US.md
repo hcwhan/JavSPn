@@ -34,7 +34,7 @@ This is a non-exhaustive list of implemented and unimplemented features being re
 - [x] Parallel data scraping
 - [x] Downloading HD covers
 - [x] AI based cover crop for atypical covers
-- [x] Automatic version-checking <del>and self-updating</del>
+- [x] Check new version <del>and self-updating</del>
 - [x] Translating titles and descriptions
 - [ ] Matching local subtitles
 - [ ] Using thumb to create folder cover

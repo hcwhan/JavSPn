@@ -8,8 +8,6 @@ By grabbing the	bangou in the file name, JavSP can pull data from multiple websi
 
 **Docker & WebUI**: Due to limited time and energy, there's no Docker support yet. On top of that, User Interface is not one of the primary goal for this [project](https://github.com/Yuukiy/JavSP/issues/148). If you need Docker support, maybe you can give [JavSP-Docker](https://github.com/tetato/JavSP-Docker) a try.
 
-**i18n**: This is a work in progress, we currently only have a English README available.
-
 ![License](https://img.shields.io/github/license/Yuukiy/JavSP)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 ![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)

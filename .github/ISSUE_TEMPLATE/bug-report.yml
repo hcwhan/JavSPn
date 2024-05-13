@@ -13,6 +13,7 @@ body:
       label: What happened?
       description: Describe the scenario in which the issue occurs
       placeholder: |
+        Describe the bug.
     validations:
       required: true
   - type: textarea
@@ -21,17 +22,17 @@ body:
       label: JavSPn Config
       description: Paste your config here
       placeholder: |
+        Paste your config.ini here.
     validations:
       required: true
-        - Please attach your `config.ini`
   - type: dropdown
     id: proxy
     attributes:
       label: Proxy
       description: Are you using a proxy?
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
     validations:
       required: true
   - type: textarea
